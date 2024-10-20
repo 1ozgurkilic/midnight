@@ -430,6 +430,7 @@ body.light-mode .video-bg:before {
   color: var(--theme-color);
   padding: 20px 40px;
   height: 100%;
+  width: 100%;
   overflow: auto;
   background-color: var(--theme-bg-color);
 }
@@ -1363,12 +1364,13 @@ body.light-mode .video-bg:before {
 
 .book-reading-area {
     background-color: var(--theme-bg-color);
-    padding: 120px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-left: 200px;
+    margin: auto;
     position: relative;
-}
+    width: 100%;
+  }
 
 .book-reading-area h2,
 .book-reading-area h3,
@@ -1384,7 +1386,7 @@ body.light-mode .video-bg:before {
     justify-content: center;
     align-items: center;
     margin: 0; /* Margin kaldır */
-    padding: 100px; /* Padding kaldır */
+    padding: 10px; /* Padding kaldır */
 }
 
 embed {
