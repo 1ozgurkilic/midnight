@@ -1362,74 +1362,34 @@ body.light-mode .video-bg:before {
 }
 
 .book-reading-area {
-  background-color: var(--theme-bg-color);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 20px;
-  position: relative;
-}
-
-.book-reading-area::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGg0dHJ5Zm05N2s1YW8ydDk5NXM4cTlleGVqOGhsdzVpeHdrdzIwcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NlnyvCrsZXD6oDg58f/giphy.gif);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.1; /* Hafif arkaplan efekti */
-  border-radius: 10px;
+    background-color: var(--theme-bg-color);
+    padding: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 200px;
+    position: relative;
 }
 
 .book-reading-area h2,
 .book-reading-area h3,
 .book-reading-area h4 {
-  color: var(--theme-color);
-  margin-bottom: 10px;
+    color: var(--theme-color);
+    margin-bottom: 10px;
 }
 
-.book-reading-area .book-content {
-  max-height: 400px;
-  overflow-y: auto;
-  background-color: var(--content-bg);
-  padding: 15px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
+.pdf-container {
+    width: 100%;
+    height: 100vh; /* Tüm ekranı kaplasın */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Margin kaldır */
+    padding: 100px; /* Padding kaldır */
 }
 
-.tool-container {
-  display: flex;
-  gap: 5px;
-  padding: 5px;
-  background: var(--theme-bg-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: move; /* Hareket ettirilebilir olması için */
-  position: absolute;
-  top: 80px; /* Daha aşağıda başlasın */
-  right: 20px;
-  z-index: 10;
-  width: max-content; /* İlk başta büyümesini engeller */
-}
-
-.tool {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
-  border-radius: 5px;
-  background: var(--theme-bg-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  justify-content: center; /* Ortadan hizalama */
-}
-
-.tool input[type="range"],
-.tool input[type="color"] {
-  width: 50px;
-  margin-bottom: 5px;
-  border-radius: 5px;
+embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px; /* Köşeleri yuvarlat */
 }
