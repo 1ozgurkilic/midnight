@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif; /* Varsayılan font */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    padding: 140px 50px 50px; /* Üstte 80px, sağda ve solda 50px, altta 50px boşluk */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Yukarı hizalama */
+    align-items: center; /* Sola hizalama */
+    background-color: #000; /* Sol tarafın arka plan rengi siyah */
+    color: #fff; /* Yazı rengi beyaz */
+}
+
+
+.right {
+    flex: 1;
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW82ZTc5dzkwOWIyem1qNGQ5aGkwczNyNjk5dWFmeWhmbTA0dHltNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1qYJt2078KC9vVyu4p/giphy.gif');
+    background-size: cover;
+    background-position: center;
+}
+.logo {
+    width: 300px;
+    height: 75px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-family: 'CocogooseProTrial', sans-serif; /* Belirtilen font */
+    font-size: 36px; /* Yazı boyutu */
+    text-align: center; /* Ortalanmış hizalama */
+    width: 100%; /* Tüm genişliği kaplaması için */
+    margin-top: 10px; /* Yukarı taşımak için azaltıldı */
+    padding: 10px; /* Yazının etrafında boşluk */
+    color: #383838;
+}
+
+.gozat{
+    font-size: 25px; /* Üye ol yazısının boyutu küçültüldü */
+    color: #3b80ff; /* Üye ol yazısının rengi */
+    margin-top: 20px; /* Üye ol yazısının üstünde boşluk */
+    text-align: center; /* Ortalanmış hizalama */
+    text-decoration: none; /* Alt çizgi kaldırıldı */
+    transition: color 0.3s; /* Geçiş efekti eklendi */
+}
+
+.gozat:hover{
+    color: white;;
+}
+
+.signup {
+    font-size: 20px; /* Üye ol yazısının boyutu küçültüldü */
+    color: #383838; /* Üye ol yazısının rengi */
+    margin-top: 20px; /* Üye ol yazısının üstünde boşluk */
+    text-align: center; /* Ortalanmış hizalama */
+    text-decoration: none; /* Alt çizgi kaldırıldı */
+    transition: color 0.3s; /* Geçiş efekti eklendi */
+}
+
+.signup:hover {
+    color: #fff; /* Üye ol yazısına hover efekti */
+}
+
+/* Yeni eklenen stil */
+.signup {
+    margin-top: 20px; /* Üye ol yazısının üstünde boşluk */
+    margin-bottom: 10px; /* Üstteki yazının altında boşluk */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center; /* Ortalamak için */
+    margin-top: 20px; /* Üstten biraz boşluk bırak */
+}
+
+.social-logo {
+    width: 40px; /* Logoların boyutu */
+    height: auto; /* Orantılı boyutlandırma */
+    margin: 0 10px; /* Yan yana görünmesi için boşluk */
+    transition: transform 0.3s; /* Hover efekti için geçiş */
+}
+
+.social-logo:hover {
+    transform: scale(1.1); /* Üzerine gelindiğinde büyüme efekti */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Dikey düzenleme */
+    }
+    .left, .right {
+        flex: none; /* Flex özelliklerini kaldır */
+        width: 100%; /* Tam genişlik */
+        padding: 20px; /* İçerik için boşluk */
+    }
+    .form-container {
+        margin-left: 0; /* Sol kenardan boşluk kaldır */
+    }
+    .logo {
+        width: 100%; /* Logoyu tam genişlik yap */
+    }
+    h2 {
+        font-size: 20px; /* Başlık boyutunu küçült */
+    }
+    input, button {
+        font-size: 14px; /* Giriş ve buton yazı boyutunu küçült */
+    }
+}
+@media (max-width: 768px) {
+    .right {
+        display: none; /* Sağ kısmı gizle */
+    }
+    
+    .container {
+        flex-direction: column; /* Dikey düzenleme */
+    }
+
+    .left {
+        flex: 1; /* Sol kısmı tam genişlik yap */
+    }
+}
