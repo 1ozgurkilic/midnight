@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #000; /* Sol tarafın arka plan rengi siyah */
+}
+
+.right {
+    flex: 1;
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW82ZTc5dzkwOWIyem1qNGQ5aGkwczNyNjk5dWFmeWhmbTA0dHltNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1qYJt2078KC9vVyu4p/giphy.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.back {
+    text-decoration: none;
+    color: #fff; /* Geri dön yazısı beyaz */
+    font-size: 18px;
+    margin-bottom: 30px; 
+    position: absolute;
+    top: 20px; 
+    left: 30px; 
+}
+
+.arrow {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 350px;
+    margin-left: 80px; /* Değişiklik yapıldı: Sağa kaydırmak için margin eklendi */
+}
+
+
+.logo {
+    width: 300px;
+    height: 75px;
+    margin-bottom: 10px;
+    margin-left: -10px; /* Sağ tarafa almak için artırdım */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff; /* Başlık beyaz */
+    margin-left: 30px; /* Sağ tarafa almak için artırdım */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px; /* Sağ tarafa almak için artırdım */
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; 
+}
+
+.password-container {
+    position: relative;
+    width: 100%; 
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px; 
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #000000; 
+}
+
+button {
+    padding: 10px;
+    background-color: #383838; /* Giriş yap butonu beyaz */
+    color: #fff; /* Yazı rengi siyah */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; 
+}
+
+button:hover {
+    background-color: #ffffff; /* Üzerine gelindiğinde koyu yeşil */
+    color: #383838;
+}
+
+.forgot-password {
+    text-align: right;
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #fff; /* Beyaz renk */
+    font-size: 14px; 
+    margin-left: 30px; /* Sağ tarafa almak için artırdım */
+}
+
+.forgot-password:hover {
+    color: #383838; /* Üzerine gelindiğinde koyu yeşil */
+}
+
+.signup {
+    text-align: center; 
+    margin-top: 10px; 
+    color: #fff; /* Beyaz renk */
+    margin-left: 30px; /* Sağ tarafa almak için artırdım */
+}
+
+.signup a {
+    color: #fff; /* Üye ol yazısı beyaz */
+    text-decoration: none;
+}
+
+.signup a:hover {
+    color: #383838; /* Üzerine gelindiğinde koyu yeşil */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Dikey düzenleme */
+    }
+    .left, .right {
+        flex: none; /* Flex özelliklerini kaldır */
+        width: 100%; /* Tam genişlik */
+        padding: 20px; /* İçerik için boşluk */
+    }
+    .form-container {
+        margin-left: 0; /* Sol kenardan boşluk kaldır */
+    }
+    .logo {
+        width: 100%; /* Logoyu tam genişlik yap */
+    }
+    h2 {
+        font-size: 20px; /* Başlık boyutunu küçült */
+    }
+    input, button {
+        font-size: 14px; /* Giriş ve buton yazı boyutunu küçült */
+    }
+}
+@media (max-width: 768px) {
+    .right {
+        display: none; /* Sağ kısmı gizle */
+    }
+    
+    .container {
+        flex-direction: column; /* Dikey düzenleme */
+    }
+
+    .left {
+        flex: 1; /* Sol kısmı tam genişlik yap */
+    }
+}
